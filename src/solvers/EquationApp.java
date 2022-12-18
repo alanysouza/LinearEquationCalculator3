@@ -9,6 +9,7 @@ import java.util.Scanner;
  * @author Alany Souza 2021345 and Thaynna Vieira 2021288
  */
 
+//test thaynna coonection
 public class EquationApp {
     private Scanner scanner;
     private UserService userService;
