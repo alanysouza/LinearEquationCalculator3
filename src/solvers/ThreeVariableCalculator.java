@@ -34,6 +34,7 @@ public class ThreeVariableCalculator {
                 Math.abs(z_coefficients[2])
         );
 
+        //Multiply equations 1, 2, & 3 by the LCM of z coefficients divided by each equation's z coefficient.
         LCM l_c_m = new LCM(stooge);
         int lcm = l_c_m.getLCM();
 
@@ -50,7 +51,7 @@ public class ThreeVariableCalculator {
         eliminator[2][1] = (lcm * y_coefficients[2]) / z_coefficients[2];
         eliminator[2][2] = (lcm * equals[2]) / z_coefficients[2];
 
-        // STEP 2:
+        // STEP 2: Subtract the new equations obtained in Step 2; eqn (2) from eqn (1) and eqn (3) from eqn (2).
         double[] new_x = {
                 eliminator[0][0] - eliminator[1][0],
                 eliminator[1][0] - eliminator[2][0]
@@ -65,13 +66,13 @@ public class ThreeVariableCalculator {
         };
 
         try {
-            // STEP 3:
+            // STEP 3: uses the methods used in the TwoVariableCalculator to calculate the X and Y elements
             double[] partial_solution;
             partial_solution = (new TwoVariablesCalculator(new_x, new_y, new_eq)).solveSimultaneous();
 
             x_variable = partial_solution[0];
             y_variable = partial_solution[1];
-            // STEP 4:
+            // STEP 4: Solve for z using x and y from any original equation
             z_variable = (double)(equals[0] - x_coefficients[0] * x_variable - y_coefficients[0] * y_variable) / z_coefficients[0];
         } catch (ArithmeticException e) {
             throw e;

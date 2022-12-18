@@ -8,6 +8,7 @@ import java.util.List;
  * @author Alany Souza 2021345 and Thaynna Vieira 2021288
  */
 
+// methods to connects with the DB, write and read
 public class ThreeVariableEquationDataProvider implements ThreeVariableEquationDataProviderInterface{
     private static String DB_NAME = "equation_app";
     private static String DB_URL = "jdbc:mysql://localhost/" + DB_NAME;

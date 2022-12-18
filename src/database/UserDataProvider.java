@@ -9,7 +9,7 @@ import java.util.List;
  * @author Alany Souza 2021345 and Thaynna Vieira 2021288
  */
 
-//connects with the DB and tables
+// methods to connects with the DB, write and read
 public class UserDataProvider implements UserDataProviderInterface {
     private static String DB_NAME = "equation_app";
     private static String DB_URL = "jdbc:mysql://localhost/" + DB_NAME;

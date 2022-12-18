@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * @author Alany Souza 2021345 and Thaynna Vieira 2021288
  */
 
+// methods to connects with the DB, write and read
 public class TwoVariableEquationDataProvider implements TwoVariableEquationDataProviderInterface{
 
     private static String DB_NAME = "equation_app";

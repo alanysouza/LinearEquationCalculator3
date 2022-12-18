@@ -21,17 +21,17 @@ public class TwoVariablesCalculator {
     }
 
     public double[] solveSimultaneous() {
-        // STEP 2:
+        // STEP 2: Multiply equation 1 by the coefficient of variable y in equation 2. 
         eliminator[0][0] = y_coefficients[1] * x_coefficients[0];
         eliminator[0][1] = y_coefficients[1] * equals[0];
-        // STEP 3:
+        // STEP 3: Multiply equation 2 by the coefficient of variable y in equation 1.
         eliminator[1][0] = y_coefficients[0] * x_coefficients[1];
         eliminator[1][1] = y_coefficients[0] * equals[1];
 
         try {
-            // STEPS 4, 5:
+            // STEPS 4, 5: Subtract the new equations obtained from Steps 2 and 3. Divide the R.H.S. from Step 4 by the coefficient of x to obtain x. 
             x_variable = (double)(eliminator[0][1] - eliminator[1][1]) / (eliminator[0][0] - eliminator[1][0]);
-            // STEP 6:
+            // STEP 6: Obtain y by solving for y from any of the original equations, using the found value of x.
             y_variable = (double)(equals[0] - x_coefficients[0] * x_variable) / y_coefficients[0];
         } catch (ArithmeticException e) {
             throw e;
