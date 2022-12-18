@@ -72,53 +72,6 @@ public class ThreeVariableEquationDataProvider implements ThreeVariableEquationD
         return equation;
     }
 
-    //TODO: remove before submission. this main method contains test code to check if these methods are working
-    /*public static void main(String[] args) {
-        ThreeVariableEquationDataProvider threeVariableEquationDataProvider = new ThreeVariableEquationDataProvider();
-        ThreeVariableEquation equationByMatrices = threeVariableEquationDataProvider.findByMatrices("1,2,1","1,3,-5","1,5,6", "2,11,29");
-
-        System.out.println("-------------------------");
-        System.out.println("This equation was found by matrices values: ");
-        System.out.println(equationByMatrices);
-        System.out.println("-------------------------");
-        System.out.println("");
-        System.out.println("");
-
-        List<ThreeVariableEquation> user2Equations = threeVariableEquationDataProvider.findByCreatedBy(2);
-        System.out.println("-------------------------");
-        System.out.println("These equations were created by user with id 2");
-        System.out.println(user2Equations);
-        System.out.println("-------------------------");
-        System.out.println("");
-        System.out.println("");
-
-        List<ThreeVariableEquation> user1Equations = threeVariableEquationDataProvider.findByCreatedBy(1);
-        System.out.println("-------------------------");
-        System.out.println("These equations were created by user with id 1");
-        System.out.println(user1Equations);
-        System.out.println("-------------------------");
-        System.out.println("");
-        System.out.println("");
-
-
-        System.out.println("-------------------------");
-        System.out.println("Saving a new ThreeVariableEquation for user 2");
-        ThreeVariableEquation newEquation = new ThreeVariableEquation( "1,1,1", "1,1,1", "1,1,1", "3,3,3", 1, 1, 1, 2);
-        int insertCount = threeVariableEquationDataProvider.save(newEquation);
-        System.out.println("Saved " + insertCount + " new ThreeVariableEquation for user 2");
-        System.out.println("-------------------------");
-        System.out.println("");
-        System.out.println("");
-
-        user2Equations = threeVariableEquationDataProvider.findByCreatedBy(2);
-        System.out.println("-------------------------");
-        System.out.println("These are the latest list of equations that were created by user with id 2");
-        System.out.println(user2Equations);
-        System.out.println("-------------------------");
-        System.out.println("");
-        System.out.println("");
-
-    }*/
 
     @Override
     public List<ThreeVariableEquation> findByCreatedBy(int userId) {
